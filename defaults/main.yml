@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-role-hifiberry
+
+hifiberry_model: hifiberry-dacplus
+#hifiberry_model: hifiberry-dac
+#hifiberry_model: hifiberry-amp
+#hifiberry_model: hifiberry-digi

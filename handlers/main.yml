@@ -1,0 +1,7 @@
+---
+# handlers file for ansible-role-hifiberry
+
+- name: reboot
+  command: 'sleep 1 && shutdown -r now "Reboot triggered by Ansible" && sleep 1'
+  async: 1
+  poll: 0

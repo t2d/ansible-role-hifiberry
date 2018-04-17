@@ -1,0 +1,26 @@
+---
+# tasks file for ansible-role-hifiberry
+
+- name: Disable onboard audio
+  lineinfile:
+    path: /boot/config.txt
+    regexp: ^dtparam=audio=on
+    state: absent
+  notify: reboot
+
+- name: Enable HiFiBerry audio
+  lineinfile:
+    path: /boot/config.txt
+    regexp: ^dtoverlay=
+    line: dtoverlay={{ hifiberry_model }}
+  notify: reboot
+
+- name: Configure ALSA
+  copy:
+    src: asound.conf
+    dest: /etc/asound.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: reboot
+
