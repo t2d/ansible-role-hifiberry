@@ -1,7 +1,7 @@
 ansible-role-hifiberry
 ======================
 
-Configure [HiFiBerry](https://www.hifiberry.com/) on [Raspbian](https://www.raspberrypi.org/downloads/raspbian/).
+Configure [HiFiBerry](https://www.hifiberry.com/) on [Raspbian](https://www.raspbian.org/).
 
 Manual tutorial located at [HiFiBerry website](https://support.hifiberry.com/hc/en-us/articles/205377651-Configuring-Linux-4-x-or-higher).
 
@@ -26,6 +26,8 @@ Example Playbook
     - hosts: pi
       roles:
          - { role: t2d.hifiberry, hifiberry_model: hifiberry-dac, tags: hifiberry }
+
+See [https://github.com/t2d/ansible-raspberrypi/] for further integration.
 
 License
 -------
